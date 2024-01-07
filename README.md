@@ -27,4 +27,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is open source and available under the <a href="">MIT License.</a>
+This project is open source and available under the <a href="https://github.com/SahafMFaisal/Rock-Paper-Scissor-Game/tree/main?tab=MIT-1-ov-file">MIT License.</a>
