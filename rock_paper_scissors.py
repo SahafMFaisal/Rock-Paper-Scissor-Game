@@ -1,23 +1,19 @@
 import random
 
-def rock_paper_scissors():
-    choices = ['rock', 'paper', 'scissors']
-    computer_choice = random.choice(choices)
+def play():
+    user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
+    computer = random.choice(['r', 'p', 's'])
 
-    user_choice = input("Enter your choice (rock, paper, scissors): ")
-    while user_choice not in choices:
-        print("Invalid choice. Please try again.")
-        user_choice = input("Enter your choice (rock, paper, scissors): ")
+    if user == computer:
+        return 'It\'s a tie'
 
-    print("Computer chose: ", computer_choice)
+    if is_win(user, computer):
+        return 'You won!'
 
-    if user_choice == computer_choice:
-        return "It's a tie!"
-    if (user_choice == 'rock' and computer_choice == 'scissors') or \
-       (user_choice == 'scissors' and computer_choice == 'paper') or \
-       (user_choice == 'paper' and computer_choice == 'rock'):
-        return "You win!"
-    else:
-        return "You lose!"
+    return 'You lost!'
 
-print(rock_paper_scissors())
+def is_win(player, opponent):
+    if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
+        return True
+
+print(play())
